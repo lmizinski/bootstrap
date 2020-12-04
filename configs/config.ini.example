@@ -1,10 +1,12 @@
+# This is a sample configuration file
+# Comments start with '#'
+
 # don't change username param
 username = `whoami`
 
-# This is a sample configuration file
-# Comments start with '#'
 # this is the path that the installer will be installed
 scriptsPath="/home/${username}/app/scripts"
+
 # this is the path that the app will be installed
 appPath="/home/${username}/app"
 localPath = "/home/${username}/app/localvolume"
