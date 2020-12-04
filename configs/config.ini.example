@@ -1,11 +1,14 @@
+# don't change username param
+username = `whoami`
+
 # This is a sample configuration file
 # Comments start with '#'
 # this is the path that the installer will be installed
-scriptsPath="/home/username/app/scripts"
+scriptsPath="/home/${username}/app/scripts"
 # this is the path that the app will be installed
-appPath="/home/username/app"
-localPath = "/home/username/app/localvolume"
-wwwPath = "/home/username/app/localvolume/www"
+appPath="/home/${username}/app"
+localPath = "/home/${username}/app/localvolume"
+wwwPath = "/home/${username}/app/localvolume/www"
 appGitUrl="https://github.com/github_username/github_project_id"
 appGitUser="git"
 appBranch=master

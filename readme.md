@@ -43,4 +43,4 @@ Username is your linux user name. You can check it with "whoami" command.
  * update settings file ( mcedit /home/username/app/scripts/configs/config.ini )
  * test if all necesary software is installed ( bash /home/username/app/scripts/test_enviroment.sh )
  * install app (bash /home/username/app/scripts/install.sh)
- * setup docker (bash /home/username/app/scripts/install.sh) 
+ * setup docker (bash /home/username/app/scripts/setup_docker.sh) 
