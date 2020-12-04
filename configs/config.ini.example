@@ -2,7 +2,7 @@
 # Comments start with '#'
 
 # don't change username param
-username = `whoami`
+username=`whoami`
 
 # this is the path that the installer will be installed
 scriptsPath="/home/${username}/app/scripts"
