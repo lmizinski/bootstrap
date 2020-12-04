@@ -6,7 +6,7 @@ const_TextGreen='\e[1;32m'
 const_TextYellow='\e[1;33m'
 
 printf '%b' "${const_TextYellow}" "Sprawdzenie czy user posiada uprawnienia sudo " "${const_TextPlain}" '\n'
-sudo -l -U whoami
+sudo -l -U `whoami`
 
 printf '%b' "${const_TextYellow}" "Sprawdzenie poprawności zainstalowania aplikacji: docker:  " "${const_TextPlain}" '\n'
 docker -v
