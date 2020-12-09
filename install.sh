@@ -27,7 +27,7 @@ echo "Creating ${codePath}"
 mkdir "$codePath"
 echo "Creating ${wwwPath}"
 mkdir "$wwwPath"
-sshCommand='ssh-add ssh/id_rsa; git clone '"${gitAccess} ${wwwPath}"
+sshCommand='ssh-add ssh/id_rsa; git clone '"'${gitAccess}' '${wwwPath}'"
 echo "Installing git: $sshCommand"
 ssh-agent bash -c "$sshCommand"
 cd $wwwPath
