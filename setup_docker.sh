@@ -10,4 +10,4 @@ printf '%b' "${const_TextYellow}" "Postawienie kontenerów dockera z pliku docke
 sudo docker-compose up -d --build
 printf '%b' "${const_TextYellow}" "Sprawdzenie kontenerów (wszystkie kontenery powinne mieć status up) " "${const_TextPlain}" '\n'
 sudo docker-compose ps
-sleep 20
+#sleep 20
