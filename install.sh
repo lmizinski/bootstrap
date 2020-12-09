@@ -18,8 +18,8 @@ do
     esac
 done
 
-sudo rm -r "$localPath"
-mkdir "$localPath"
+sudo rm -r "$codePath"
+mkdir "$codePath"
 gitAccess = "${appGitUser}@${appGitUrl}"
 ssh-agent bash -c 'ssh-add ssh/id_rsa; git clone "$gitAccess" "$wwwPath"'
 cd $wwwPath
