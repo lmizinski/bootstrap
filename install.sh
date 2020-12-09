@@ -20,9 +20,12 @@ done
 
 if [ -d "$codePath" ] 
 then
+    echo "Deleteing ${codePath}"
     sudo rm -r "$codePath"
 fi
+echo "Creating ${codePath}"
 mkdir "$codePath"
+echo "Creating ${wwwPath}"
 mkdir "$wwwPath"
 echo "Installing git ${gitAccess} ${wwwPath}"
 ssh-agent bash -c 'ssh-add ssh/id_rsa; git clone '"${gitAccess} ${wwwPath}"
