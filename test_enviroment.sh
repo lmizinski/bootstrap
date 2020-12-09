@@ -37,7 +37,7 @@ SSH_FILE_RELATIVE_PATH=ssh/id_rsa.pub
 if [ -f "$SSH_FILE_ABSOLUTE_PATH" ] || [ -f "$SSH_FILE_RELATIVE_PATH" ]; then
 	printf '%b' "${const_TextGreen}" "ssh file ($SSH_FILE_ABSOLUTE_PATH) exists. " "${const_TextPlain}" '\n'
 else
-	printf '%b' "${const_TextRed}" "ssh file ($SSH_FILE_ABSOLUTE_PATH) does not exist. Run bash generate_ssh.sh to fix it. Copy this file to github repository. " "${const_TextPlain}" '\n'
+	printf '%b' "${const_TextRed}" "ssh file ($SSH_FILE_ABSOLUTE_PATH) does not exist. Run bash generate_ssh.sh to fix it. Copy this file to your github repository. " "${const_TextPlain}" '\n'
 fi
 
 

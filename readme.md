@@ -28,7 +28,7 @@ Copy file scripts_path/configs/config.ini.example to scripts_path/configs/config
 
 ## File list
  * test_enviroment.sh - tests whether all necesary requirements are preinstalled
- * generate_ssh.sh - creates ssh key, which has to be added to git Deploy Key, to be able to access code
+ * generate_ssh.sh - creates ssh key `ssh\id_rsa.pub`. This file has to be added to git Deploy Key, to be give your server access to your github repository
  * install.sh - dowloads code from your git repo specified in settings file,
  * update.sh - updates code from your git repo specified in settings file,
  * setup_docker.sh - creates containers and checks status
