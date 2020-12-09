@@ -18,7 +18,7 @@ Works for (tested):
 Settings are stored in scripts_path/configs/config.ini. 
 Copy file scripts_path/configs/config.ini.example to scripts_path/configs/config.ini to edit settings like:
  * `scriptsPath`="/home/username/app/scripts"         - this is the path that you git pull your scripts
- * `appPath`="/home/username/app/localvolume"         - this is the path that the app will be installed
+ * `appPath`="/home/username/app/code"                - this is the path that the app will be installed
  * `appGitUser="git"`                                 - git username
  * `appGitUrl="https://github.com/github_username/github_project_id"` - your github app URL
  * `appBranch=master`                                 - branch that you want to deploy
