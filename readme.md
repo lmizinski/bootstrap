@@ -43,6 +43,7 @@ Follow these steps to install app:
  * test if all necesary software is installed `bash /home/username/app/scripts/test_enviroment.sh`
  * copy settings file `cp /home/username/app/scripts/configs/config.ini.example /home/username/app/scripts/configs/config.ini`
  * update settings file `mcedit /home/username/app/scripts/configs/config.ini`
+ * generate ssh key `bash /home/username/app/scripts/generate_ssh.sh`. This will create file `ssh\id_rsa.pub`. This file has to be added to git Deploy Key, to be give your server access to your github repository.
  * test if all necesary software is installed `bash /home/username/app/scripts/test_enviroment.sh`
  * install app `bash /home/username/app/scripts/install.sh`
  * setup docker `bash /home/username/app/scripts/setup_docker.sh` 
