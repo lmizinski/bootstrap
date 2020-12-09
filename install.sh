@@ -20,17 +20,18 @@ done
 
 if [ -d "$codePath" ] 
 then
-    echo "Deleteing ${codePath}"
+    echo "Deleting ${codePath}"
     sudo rm -r "$codePath"
 fi
 echo "Creating ${codePath}"
 mkdir "$codePath"
 echo "Creating ${wwwPath}"
 mkdir "$wwwPath"
-echo "Installing git ${gitAccess} ${wwwPath}"
-ssh-agent bash -c 'ssh-add ssh/id_rsa; git clone '"${gitAccess} ${wwwPath}"
+sshCommand='ssh-add ssh/id_rsa; git clone '"${gitAccess} ${wwwPath}"
+echo "Installing git: $sshCommand"
+ssh-agent bash -c "$sshCommand"
 cd $wwwPath
-cp .env.prod .env
+cp "$envFile" .env
 
 #bash composer.sh
 #bash laravel.sh
