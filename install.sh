@@ -24,7 +24,6 @@ then
 fi
 mkdir "$codePath"
 mkdir "$wwwPath"
-gitAccess="${appGitUser}@${appGitUrl}"
 echo "Installing git ${gitAccess} ${wwwPath}"
 ssh-agent bash -c 'ssh-add ssh/id_rsa; git clone '"${gitAccess} ${wwwPath}"
 cd $wwwPath
