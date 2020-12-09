@@ -1,1 +1,3 @@
 /configs/config.ini
+/ssh/*
+!ssh/.gitkeep 
