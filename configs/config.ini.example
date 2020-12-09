@@ -4,17 +4,18 @@
 # don't change username param
 username=`whoami`
 
+#root folder
+mainFolder="/home/${username}/app"
+
 # this is the path that the installer will be installed
-scriptsPath="/home/${username}/app/scripts"
+scriptsPath="${mainFolder}/scripts"
 
 # this is the path that the app will be installed
-appPath="/home/${username}/app"
-localPath="/home/${username}/app/localvolume"
-wwwPath="/home/${username}/app/localvolume/www"
-appGitUrl="https://github.com/github_username/github_project_id"
+codePath="${mainFolder}/code"
+wwwPath="${codePath}/www"
+appGitUrl="https://github.com/ze-it/scania-sent"
 appGitUser="git"
 appBranch=master
-dockerWwwPath="/var/www/html/www"
 
 # do you use those in your app? (1-yes, 0-no)
 laravel=1
@@ -23,4 +24,5 @@ composer=1
 npm=1
 
 # don't change this
+dockerWwwPath="/var/www/html/www"
 dockerArtisanPath="${dockerWwwPath}/artisan"
