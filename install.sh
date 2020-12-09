@@ -21,16 +21,16 @@ done
 sudo rm -r "$localPath"
 mkdir "$localPath"
 gitAccess = "${appGitUser}@${appGitUrl}"
-ssh-agent bash -c 'ssh-add id_rsa; git clone "$gitAccess" "$wwwPath"'
+ssh-agent bash -c 'ssh-add ssh/id_rsa; git clone "$gitAccess" "$wwwPath"'
 cd $wwwPath
 cp .env.prod .env
 
-bash composer.sh
-bash laravel.sh
-bash files.sh
-bash npm.sh
+#bash composer.sh
+#bash laravel.sh
+#bash files.sh
+#bash npm.sh
 
 
-sudo docker exec -d php php-fpm
+#sudo docker exec -d php php-fpm
 echo "PHP started"
-bash test_enviroment.sh
+#bash test_enviroment.sh
