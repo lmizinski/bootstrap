@@ -33,7 +33,7 @@ fi
 
 # test whether ssh file was generated
 SSH_FILE_ABSOLUTE_PATH="/home/${username}/app/scripts/ssh/id_rsa.pub"
-SSH_FILE_RELATIVE_PATH=configs/config.ini
+SSH_FILE_RELATIVE_PATH=ssh/id_rsa.pub
 if [ -f "$SSH_FILE_ABSOLUTE_PATH" ] || [ -f "$SSH_FILE_RELATIVE_PATH" ]; then
 	printf '%b' "${const_TextGreen}" "ssh file ($SSH_FILE_ABSOLUTE_PATH) exists. " "${const_TextPlain}" '\n'
 else
