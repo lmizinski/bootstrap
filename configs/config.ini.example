@@ -13,8 +13,9 @@ scriptsPath="${mainFolder}/scripts"
 # this is the path that the app will be installed
 codePath="${mainFolder}/code"
 wwwPath="${codePath}/www"
-appGitUrl="https://github.com/ze-it/scania-sent"
+appGitUrl='https://github.com/ze-it/scania-sent'
 appGitUser="git"
+gitAccess="${appGitUser}@${appGitUrl}"
 appBranch=master
 
 # do you use those in your app? (1-yes, 0-no)
