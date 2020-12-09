@@ -18,9 +18,11 @@ printf '%b' "${const_TextYellow}" "Sprawdzenie poprawności zainstalowania aplik
 git --version
 
 # test whether config file was created
+username=`whoami`
+FILE_PATH="/home/${username}/app/scripts/configs/config.ini"
 
 FILE=configs/config.ini
-if [ -f "$FILE" ]; then
+if [ -f "$FILE" ] || [ -f "$FILE_PATH" ]; then
 	printf '%b' "${const_TextGreen}" "config file ($FILE) exists. " "${const_TextPlain}" '\n'
 else
 	printf '%b' "${const_TextRed}" "config file ($FILE) does not exist. " "${const_TextPlain}" '\n'
