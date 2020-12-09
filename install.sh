@@ -18,10 +18,13 @@ do
     esac
 done
 
-sudo rm -r "$codePath"
+if [ -d "$codePath" ] 
+then
+    sudo rm -r "$codePath"
+fi
 mkdir "$codePath"
-gitAccess = "${appGitUser}@${appGitUrl}"
-ssh-agent bash -c 'ssh-add ssh/id_rsa; git clone "$gitAccess" "$wwwPath"'
+gitAccess="${appGitUser}@${appGitUrl}"
+ssh-agent bash -c 'ssh-add ssh/id_rsa; git clone "${gitAccess}" "${wwwPath}"'
 cd $wwwPath
 cp .env.prod .env
 
