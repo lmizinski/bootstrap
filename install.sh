@@ -23,6 +23,7 @@ then
     sudo rm -r "$codePath"
 fi
 mkdir "$codePath"
+mkdir "$wwwPath"
 gitAccess="${appGitUser}@${appGitUrl}"
 ssh-agent bash -c 'ssh-add ssh/id_rsa; git clone "${gitAccess}" "${wwwPath}"'
 cd $wwwPath
