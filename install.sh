@@ -25,7 +25,9 @@ fi
 mkdir "$codePath"
 mkdir "$wwwPath"
 gitAccess="${appGitUser}@${appGitUrl}"
-ssh-agent bash -c 'ssh-add ssh/id_rsa; git clone "${gitAccess}" "${wwwPath}"'
+test="${appGitUser}@${appGitUrl}"
+echo "Installing git ${gitAccess} ${test} ${wwwPath}"
+ssh-agent bash -c 'ssh-add ssh/id_rsa; git clone "${gitAccess}" .'
 cd $wwwPath
 cp .env.prod .env
 
