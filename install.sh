@@ -33,6 +33,8 @@ ssh-agent bash -c "$sshCommand"
 cd $wwwPath
 cp "$envFile" .env
 
+
+cd "$scriptsPath"
 bash composer.sh
 bash laravel.sh
 bash files.sh
