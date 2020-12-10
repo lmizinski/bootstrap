@@ -49,4 +49,6 @@ bash npm_install.sh
 
 cd $wwwPath
 sudo docker exec -d php php-fpm
+sudo docker exec -ti nginx service nginx restart
+
 echo "Instalacja zakończona"
