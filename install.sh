@@ -30,6 +30,7 @@ mkdir "$wwwPath"
 sshCommand='ssh-add ssh/id_rsa; git clone '"'${gitAccess}' '${wwwPath}'"
 echo "Installing git: $sshCommand"
 ssh-agent bash -c "$sshCommand"
+cat /home/lmi/code/www/configs/nginx/default.conf
 cd $wwwPath
 cp "$envFile" .env
 
