@@ -25,6 +25,12 @@ then
 fi
 echo "Creating $codePath"
 mkdir "$codePath"
+echo "Creating $logsPath"
+mkdir "$logsPath"
+echo "Creating $nginxPath"
+mkdir "$nginxPath"
+echo "Creating $postgresqlPath"
+mkdir "$postgresqlPath"
 echo "Creating $wwwPath"
 mkdir "$wwwPath"
 sshCommand='ssh-add ssh/id_rsa; git clone '"'${gitAccess}' '${wwwPath}'"
@@ -33,9 +39,6 @@ ssh-agent bash -c "$sshCommand"
 cd $wwwPath
 cp "$envFile" .env
 
-
-cd "$scriptsPath"
-bash postgresql.sh
 
 #bash setup_docker.sh
 #bash composer.sh
