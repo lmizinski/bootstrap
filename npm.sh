@@ -1,7 +1,6 @@
 #!/bin/bash
 source "./configs/config.ini"
-if [[ "$npm" -eq 1 ]]; 
-then
+if [[ "$npm" -eq 1 ]]; then
     echo "Running npm"
     ######## pobieranie nowych bibliotek kodu ###################
 	sudo docker exec -ti npm npm install
