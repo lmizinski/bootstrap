@@ -23,9 +23,9 @@ then
     echo "Deleting ${codePath}"
     sudo rm -r "$codePath"
 fi
-echo "Creating ${codePath}"
+echo "Creating $codePath"
 mkdir "$codePath"
-echo "Creating ${wwwPath}"
+echo "Creating $wwwPath"
 mkdir "$wwwPath"
 sshCommand='ssh-add ssh/id_rsa; git clone '"'${gitAccess}' '${wwwPath}'"
 echo "Installing git: $sshCommand"
@@ -35,6 +35,7 @@ cp "$envFile" .env
 
 
 cd "$scriptsPath"
+bash postgresql.sh
 bash setup_docker.sh
 bash composer.sh
 bash laravel.sh
