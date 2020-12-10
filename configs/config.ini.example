@@ -17,6 +17,7 @@ appGitUrl='github.com:ze-it/scania-sent.git'
 appGitUser="git"
 gitAccess="${appGitUser}@${appGitUrl}"
 appBranch=master
+envFile=".env.prod"
 
 # do you use those in your app? (1-yes, 0-no)
 laravel=1
