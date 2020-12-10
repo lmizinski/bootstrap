@@ -45,9 +45,8 @@ bash setup_docker.sh
 bash composer.sh
 bash laravel.sh
 bash files.sh
-bash npm.sh
+bash npm_install.sh
 
-echo "Pierwsza część zakończona"
-
+cd $wwwPath
 sudo docker exec -d php php-fpm
-#bash test_enviroment.sh
+echo "Instalacja zakończona"

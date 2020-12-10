@@ -11,8 +11,5 @@ if [[ "$npm" -eq 1 ]]; then
 	sudo docker exec -ti npm npm rebuild
 	sudo docker exec -ti npm npm run watch
 	######## kompilowanie kodu ###################
-	sudo docker exec -d npm npm run production &
+	sudo docker exec -d npm npm run production
 fi
-
-
-
