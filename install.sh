@@ -49,5 +49,5 @@ bash npm.sh
 
 echo "Pierwsza część zakończona"
 
-#sudo docker exec -d php php-fpm
+sudo docker exec -d php php-fpm
 #bash test_enviroment.sh
