@@ -2,7 +2,7 @@
 source "./configs/config.ini"
 
 ######## operacje na bazie danych - dopiero po ręcznej aktualizacji configu ###################
-if [[ $laravelVoyager -eq 1 ]]; 
+if [[ "$laravelVoyager" -eq 1 ]]; 
 then
   echo "Running laravelVoyager";
   sudo docker exec -ti php php $dockerArtisanPath voyager:admin your@email.com --create

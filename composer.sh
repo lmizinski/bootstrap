@@ -1,6 +1,6 @@
 #!/bin/bash
 source "./configs/config.ini"
-if [[ $composer -eq 1 ]]; 
+if [[ "$composer" -eq 1 ]]; 
 then
   cd "$wwwPath"
   echo "Running composer"
