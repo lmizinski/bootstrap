@@ -40,6 +40,7 @@ cd $wwwPath
 cp "$envFile" .env
 
 
+cd $scriptsPath
 bash setup_docker.sh
 #bash composer.sh
 #bash laravel.sh
