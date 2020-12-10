@@ -1,6 +1,9 @@
 #!/bin/bash
 source "./configs/config.ini"
-echo "Changing file permissions"
+
+const_TextPlain='\e[0m'  
+const_TextYellow='\e[1;33m' 
+printf '%b' "${const_TextYellow}" "Changing file permissions" "${const_TextPlain}" '\n'
 ######## uprawnienia do plików ###################
 sudo docker exec -ti php chown -R root:www-data $dockerWwwPath
 sudo docker exec -ti php find $dockerWwwPath -type d -exec chmod 775 {} \;            #tylko foldery
