@@ -2,8 +2,8 @@
 source "./configs/config.ini"
 
 cd $wwwPath
-
-ssh-agent bash -c 'ssh-add ./../../id_rsa; git reset --hard; git pull "git@github.com:ze-it/projekt-scania.git"'
+sshCommand='ssh-add ssh/id_rsa; git reset --hard; git pull '"'${gitAccess}'"
+ssh-agent bash -c "$sshCommand"
 
 sudo docker exec -ti composer composer install
 sudo docker exec -ti php php /var/www/html/www/artisan migrate
