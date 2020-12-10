@@ -18,19 +18,19 @@ do
     esac
 done
 
-if [ -d "$codePath" ] 
-then
-    echo "Deleting ${codePath}"
-    sudo rm -r "$codePath"
-fi
-echo "Creating $codePath"
-mkdir "$codePath"
+echo "Creating $localvolumePath"
+mkdir "$localvolumePath"
 echo "Creating $logsPath"
 mkdir "$logsPath"
 echo "Creating $nginxPath"
 mkdir "$nginxPath"
 echo "Creating $postgresqlPath"
 mkdir "$postgresqlPath"
+if [ -d "$wwwPath" ] 
+then
+    echo "Deleting ${wwwPath}"
+    sudo rm -r "$wwwPath"
+fi
 echo "Creating $wwwPath"
 mkdir "$wwwPath"
 sshCommand='ssh-add ssh/id_rsa; git clone '"'${gitAccess}' '${wwwPath}'"
