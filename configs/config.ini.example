@@ -10,9 +10,15 @@ mainFolder="/home/${username}/app"
 # this is the path that the installer will be installed
 scriptsPath="${mainFolder}/scripts"
 
+localvolumePath="${mainFolder}/localvolume"
+
+# this is the path where database data will be stored
+logsPath="${localvolumePath}/logs"
+nginxPath="${localvolumePath}/nginx"
+postgresqlPath="${localvolumePath}/postgresql"
+wwwPath="${localvolumePath}/www"  
+
 # this is the path that the app will be installed
-codePath="${mainFolder}/code"
-wwwPath="${codePath}/www"
 appGitUrl='github.com:ze-it/scania-sent.git'
 appGitUser="git"
 gitAccess="${appGitUser}@${appGitUrl}"

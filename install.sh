@@ -42,10 +42,10 @@ cp "$envFile" .env
 
 cd $scriptsPath
 bash setup_docker.sh
-#bash composer.sh
-#bash laravel.sh
-#bash files.sh
-#bash npm.sh
+bash composer.sh
+bash laravel.sh
+bash files.sh
+bash npm.sh
 
 echo "Pierwsza część zakończona"
 
