@@ -36,11 +36,12 @@ cp "$envFile" .env
 
 cd "$scriptsPath"
 bash postgresql.sh
-bash setup_docker.sh
-#bash composer.sh
-#bash laravel.sh
-#bash files.sh
-#bash npm.sh
+bash composer.sh
+bash laravel.sh
+bash files.sh
+bash npm.sh
+
+#bash setup_docker.sh
 
 
 #sudo docker exec -d php php-fpm
