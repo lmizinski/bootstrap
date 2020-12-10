@@ -2,7 +2,7 @@
 source "./configs/config.ini"
 
 cd $wwwPath
-sshCommand='ssh-add ssh/id_rsa; git reset --hard; git pull '"'${gitAccess}'"
+sshCommand='ssh-add ../../scripts/ssh/id_rsa; git reset --hard; git pull '"'${gitAccess}'"
 ssh-agent bash -c "$sshCommand"
 
 sudo docker exec -ti composer composer install
