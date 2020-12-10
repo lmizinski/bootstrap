@@ -8,6 +8,8 @@ const_TextYellow='\e[1;33m'
 
 cd $wwwPath
 
+sleep 10
+
 # test whether ssh file was generated
 NGINX_CONFIG_FILE_ABSOLUTE_PATH="/home/lmi/code/www/configs/nginx/default.conf"
 if [ -f "$NGINX_CONFIG_FILE_ABSOLUTE_PATH" ]; then
