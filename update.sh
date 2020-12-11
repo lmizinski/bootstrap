@@ -7,6 +7,7 @@ ssh-agent bash -c "$sshCommand"
 
 sudo docker exec -ti composer composer install
 sudo docker exec -ti php php "$dockerArtisanPath" migrate
+sudo docker exec -ti php php "$dockerArtisanPath" migrate:status
 
 cd $scriptsPath
 bash files.sh
