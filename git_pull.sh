@@ -17,4 +17,7 @@ sudo docker exec -d php php-fpm
 (cd /home/lmi/app/localvolume/www; sudo docker-compose start php)
 (cd /home/lmi/app/localvolume/www; sudo docker exec -d php php-fpm)
 
+(cd /home/lmi/app/localvolume/www; sudo docker-compose stop postgres)
+(cd /home/lmi/app/localvolume/www; sudo docker-compose start postgres)
+
 echo "Kod podegrany"

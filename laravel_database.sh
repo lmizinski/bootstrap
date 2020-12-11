@@ -8,3 +8,7 @@ if [[ "$laravelVoyager" -eq 1 ]]; then
   sudo docker exec -ti php php $dockerArtisanPath migrate
   sudo docker exec -ti php php $dockerArtisanPath db:seed --class=VoyagerDatabaseSeeder
 fi
+if [[ "$passport" -eq 1 ]]; then
+  echo "Running laravelVoyager";
+  sudo docker exec -ti php php $dockerArtisanPath passport:install
+fi
