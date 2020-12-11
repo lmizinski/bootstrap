@@ -6,7 +6,7 @@ sshCommand='ssh-add ../../scripts/ssh/id_rsa; git reset --hard; git pull '"'${gi
 ssh-agent bash -c "$sshCommand"
 
 sudo docker exec -ti composer composer install
-sudo docker exec -ti php php /var/www/html/www/artisan migrate
+sudo docker exec -ti php php "$dockerArtisanPath" migrate
 
 cd $scriptsPath
 bash files.sh

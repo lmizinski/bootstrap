@@ -39,7 +39,6 @@ ssh-agent bash -c "$sshCommand"
 cd $wwwPath
 cp "$envFile" .env
 
-
 cd $scriptsPath
 bash setup_docker.sh
 bash composer.sh
