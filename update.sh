@@ -9,8 +9,6 @@ sudo docker exec -ti composer composer install
 sudo docker exec -ti php php "$dockerArtisanPath" migrate
 sudo docker exec -ti php php "$dockerArtisanPath" migrate:status
 
-sleep 2
-
 cd $scriptsPath
 bash files.sh
 bash npm_update.sh
