@@ -2,7 +2,7 @@
 # Comments start with '#'
 
 # don't change username param
-username=`whoami`
+username=$1
 
 #root folder
 mainFolder="/home/${username}/app"
