@@ -10,9 +10,9 @@ Works for (tested):
  * postgres, mssrv
 
 ## Server requirements
- * user has to be added to sudoers??
+ * user has to be added to sudoers
  * server has to have git installed
- * server has to have docker oraz docker-compose installed
+ * server has to have docker and docker-compose installed
 
 ## Settings
 Settings are stored in scripts_path/configs/config.ini. 
