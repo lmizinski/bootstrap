@@ -10,9 +10,9 @@ Works for (tested):
  * postgres, mssrv
 
 ## Server requirements
- * user has to be added to sudoers??
+ * user has to be added to sudoers
  * server has to have git installed
- * server has to have docker oraz docker-compose installed
+ * server has to have docker and docker-compose installed
 
 ## Settings
 Settings are stored in scripts_path/configs/config.ini. 
@@ -37,13 +37,13 @@ Copy file scripts_path/configs/config.ini.example to scripts_path/configs/config
 Username is your linux user name. You can check it with "whoami" command.
 
 Follow these steps to install app:
- * if the folder where you want your scripts to be installed doesn't exist, create it `mkdir "/home/username/app/scripts"`
- * go to the folder  `cd "/home/username/app/scripts"`
- * download scripts `git clone https://github.com/lmizinski/bootstrap .`
- * test if all necesary software is installed `bash /home/username/app/scripts/test_enviroment.sh`
- * copy settings file `cp /home/username/app/scripts/configs/config.ini.example /home/username/app/scripts/configs/config.ini`
- * update settings file `mcedit /home/username/app/scripts/configs/config.ini`
- * generate ssh key `bash /home/username/app/scripts/generate_ssh.sh`. This will create file `ssh\id_rsa.pub`. This file has to be added to git Deploy Key, to be give your server access to your github repository.
- * test if all necesary software is installed `bash /home/username/app/scripts/test_enviroment.sh`
- * install app `bash /home/username/app/scripts/install.sh`
- * setup docker `bash /home/username/app/scripts/setup_docker.sh` 
+ * if the folder where you want your scripts to be installed doesn't exist, create it `sudo mkdir "/home/username/app/scripts"`
+ * go to the folder  `sudo cd "/home/username/app/scripts"`
+ * download scripts `sudo git clone https://github.com/lmizinski/bootstrap .`
+ * test if all necesary software is installed `sudo bash /home/username/app/scripts/test_enviroment.sh`
+ * copy settings file `sudo cp /home/username/app/scripts/configs/config.ini.example /home/username/app/scripts/configs/config.ini`
+ * update settings file `sudo mcedit /home/username/app/scripts/configs/config.ini`
+ * generate ssh key `sudo bash /home/username/app/scripts/generate_ssh.sh`. This will create file `ssh\id_rsa.pub`. This file has to be added to git Deploy Key, to be give your server access to your github repository.
+ * test if all necesary software is installed `sudo bash /home/username/app/scripts/test_enviroment.sh`
+ * install app `sudo bash /home/username/app/scripts/install.sh $USER`
+ * setup docker `sudo bash /home/username/app/scripts/setup_docker.sh` 
