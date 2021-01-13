@@ -10,4 +10,4 @@ ssh-agent bash -c "$sshCommand"
 cd $scriptsPath
 bash "$scriptsPath/restart_services.sh"
 
-print_message "Code updated & services restarted" 'green'
+print_message "Code updated" 'green'

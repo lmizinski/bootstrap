@@ -16,4 +16,4 @@ print_message "Restarting services:  postgres" 'yellow'
 (cd $wwwPath; sudo docker-compose stop postgres)
 (cd $wwwPath; sudo docker-compose start postgres)
 
-print_message "Code updated & services restarted" 'green'
+print_message "All services restarted" 'green'
