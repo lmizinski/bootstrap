@@ -2,13 +2,10 @@
 source "./configs/config.ini"
 source "functions.sh"
 
+print_message "git pull" 'yellow'
 cd $wwwPath
 sshCommand='ssh-add ../../scripts/ssh/id_rsa; git reset --hard; git pull '"'${gitAccess}'"
 ssh-agent bash -c "$sshCommand"
-
-cd $wwwPath
-######## start usług ###########################
-sudo docker exec -d php php-fpm
 
 print_message "Restarting services:  nginx" 'yellow'
 (cd $wwwPath; sudo docker-compose stop nginx)
