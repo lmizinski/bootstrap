@@ -1,15 +1,16 @@
 #!/bin/bash
 source "./configs/config.ini"
+source "functions.sh"
 
 cd $wwwPath
 sshCommand='ssh-add ../../scripts/ssh/id_rsa; git reset --hard; git pull '"'${gitAccess}'"
 ssh-agent bash -c "$sshCommand"
 
-echo "Running: composer install"
+print_message "Running: composer install" 'yellow'
 sudo docker exec -ti composer composer install
-echo "Running: artisan migrate"
+print_message "Running: artisan migrate" 'yellow'
 sudo docker exec -ti php php "$dockerArtisanPath" migrate
-echo "Running: artisan migrate:status"
+echo "Running: artisan migrate:status" 'yellow'
 sudo docker exec -ti php php "$dockerArtisanPath" migrate:status
 
 cd $scriptsPath
