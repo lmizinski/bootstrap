@@ -1,5 +1,6 @@
 #!/bin/bash
 source "./configs/config.ini"
+source "functions.sh"
 
 PS3='Czy na pewno chcesz pobrać kod od nowa? Operacja usunie WSZYSTKIE pliki z folderu www i pobierze kod od nowa: '
 options=("Kontynuuj" "Przerwij")
@@ -18,27 +19,28 @@ do
     esac
 done
 
-echo "Creating $localvolumePath"
+print_message "Creating $localvolumePath" 'yellow'
 mkdir "$localvolumePath"
-echo "Creating $logsPath"
+print_message "Creating $logsPath" 'yellow'
 mkdir "$logsPath"
-echo "Creating $nginxPath"
+print_message "Creating $nginxPath" 'yellow'
 mkdir "$nginxPath"
-echo "Creating $postgresqlPath"
+print_message "Creating $postgresqlPath" 'yellow'
 mkdir "$postgresqlPath"
 if [ -d "$wwwPath" ] 
 then
-    echo "Deleting ${wwwPath}"
+    print_message "Deleting ${wwwPath}" 'yellow'
     sudo rm -r "$wwwPath"
 fi
-echo "Creating $wwwPath"
+print_message "Creating $wwwPath" 'yellow'
 mkdir "$wwwPath"
 sshCommand='ssh-add ssh/id_rsa; git clone '"'${gitAccess}' '${wwwPath}'"
-echo "Installing git: $sshCommand"
+print_message "Installing git: $sshCommand" 'yellow'
 ssh-agent bash -c "$sshCommand"
 cd $wwwPath
 cp "$envFile" .env
 
+print_message "Running: scripts" 'yellow'
 cd $scriptsPath
 bash "$scriptsPath/setup_docker.sh"
 bash "$scriptsPath/composer.sh"
