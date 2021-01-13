@@ -8,13 +8,10 @@ ssh-agent bash -c "$sshCommand"
 
 print_message "Running: composer install" 'yellow'
 sudo docker exec -ti composer composer install
-print_message "Running: artisan migrate" 'yellow'
-sudo docker exec -ti php php "$dockerArtisanPath" migrate
-print_message "Running: artisan migrate:status" 'yellow'
-sudo docker exec -ti php php "$dockerArtisanPath" migrate:status
 
 print_message "Running: scripts" 'yellow'
 cd $scriptsPath
+bash "$scriptsPath/database_migrate.sh"
 bash "$scriptsPath/files.sh"
 bash "$scriptsPath/npm_update.sh"
 
