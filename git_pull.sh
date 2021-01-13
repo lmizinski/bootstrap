@@ -9,15 +9,15 @@ cd $wwwPath
 ######## start usług ###########################
 sudo docker exec -d php php-fpm
 
-(cd /home/lmi/app/localvolume/www; sudo docker-compose stop nginx)
-(cd /home/lmi/app/localvolume/www; sudo docker-compose start nginx) 
-(cd /home/lmi/app/localvolume/www; sudo docker exec -ti nginx service nginx start)
+(cd $wwwPath; sudo docker-compose stop nginx)
+(cd $wwwPath; sudo docker-compose start nginx) 
+(cd $wwwPath; sudo docker exec -ti nginx service nginx start)
 
-(cd /home/lmi/app/localvolume/www; sudo docker-compose stop php)
-(cd /home/lmi/app/localvolume/www; sudo docker-compose start php)
-(cd /home/lmi/app/localvolume/www; sudo docker exec -d php php-fpm)
+(cd $wwwPath; sudo docker-compose stop php)
+(cd $wwwPath; sudo docker-compose start php)
+(cd $wwwPath; sudo docker exec -d php php-fpm)
 
-(cd /home/lmi/app/localvolume/www; sudo docker-compose stop postgres)
-(cd /home/lmi/app/localvolume/www; sudo docker-compose start postgres)
+(cd $wwwPath; sudo docker-compose stop postgres)
+(cd $wwwPath; sudo docker-compose start postgres)
 
 echo "Kod podegrany"

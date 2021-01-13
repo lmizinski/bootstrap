@@ -10,8 +10,8 @@ sudo docker exec -ti php php "$dockerArtisanPath" migrate
 sudo docker exec -ti php php "$dockerArtisanPath" migrate:status
 
 cd $scriptsPath
-bash files.sh
-bash npm_update.sh
+bash "$scriptsPath/files.sh"
+bash "$scriptsPath/npm_update.sh"
 
 cd $wwwPath
 ######## start usług ###########################

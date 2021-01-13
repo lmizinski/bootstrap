@@ -40,11 +40,11 @@ cd $wwwPath
 cp "$envFile" .env
 
 cd $scriptsPath
-bash setup_docker.sh
-bash composer.sh
-bash laravel.sh
-bash files.sh
-bash npm_install.sh
+bash "$scriptsPath/setup_docker.sh"
+bash "$scriptsPath/composer.sh"
+bash "$scriptsPath/laravel.sh"
+bash "$scriptsPath/files.sh"
+bash "$scriptsPath/npm_install.sh"
 
 cd $wwwPath
 sudo docker exec -d php php-fpm
