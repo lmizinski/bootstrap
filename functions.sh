@@ -13,13 +13,13 @@ YELLOW='\e[1;33m'
 function print_message {
     if [ $2 == 'red' ]
     then
-        echo -e "${RED} $1 ${NC}"
+        echo -e "${RED}$1 ${NC}"
     elif [ $2 == 'green' ]
     then
-        echo -e "${GREEN} $1 ${NC}"
+        echo -e "${GREEN}$1 ${NC}"
     elif [ $2 == 'yellow' ]
     then
-        echo -e "${YELLOW} $1 ${NC}"
+        echo -e "${YELLOW}$1 ${NC}"
     else
         echo -e "${NC} $1 ${NC}"
     fi

@@ -10,9 +10,10 @@ print_message "Running: composer install" 'yellow'
 sudo docker exec -ti composer composer install
 print_message "Running: artisan migrate" 'yellow'
 sudo docker exec -ti php php "$dockerArtisanPath" migrate
-echo "Running: artisan migrate:status" 'yellow'
+print_message "Running: artisan migrate:status" 'yellow'
 sudo docker exec -ti php php "$dockerArtisanPath" migrate:status
 
+print_message "Running: scripts" 'yellow'
 cd $scriptsPath
 bash "$scriptsPath/files.sh"
 bash "$scriptsPath/npm_update.sh"
