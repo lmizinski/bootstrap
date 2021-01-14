@@ -47,3 +47,4 @@ Follow these steps to install app:
  * test if all necesary software is installed `sudo bash /home/username/app/scripts/test_enviroment.sh`
  * install app `sudo bash /home/username/app/scripts/install.sh $USER`
  * setup docker `sudo bash /home/username/app/scripts/setup_docker.sh` 
+ * run scripts that require docker running `sudo bash /home/username/app/scripts/post_setup_docker.sh` 

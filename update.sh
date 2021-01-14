@@ -9,6 +9,10 @@ ssh-agent bash -c "$sshCommand"
 print_message "Running: composer install" 'yellow'
 sudo docker exec -ti composer composer install
 
+print_message "Running: php artisan config:clear" 'yellow'
+cd $wwwPath
+sudo docker-compose exec php bash -c "(cd /var/www/html/www && php artisan config:clear)"
+
 print_message "Running: scripts" 'yellow'
 cd $scriptsPath
 bash "$scriptsPath/database_migrate.sh"
