@@ -52,6 +52,8 @@ else
 	print_message "ssh pem file ($SSH_FILE_ABSOLUTE_PATH) does not exist. Run bash ssh_to_pem.sh to fix it. Copy this file to your github repository. " 'red'
 fi
 
+# openssl x509 -noout -text -in "SSH_FILE_ABSOLUTE_PATH"
+
 print_message "  " 'yellow'
 print_message "  " 'yellow'
 print_message "Press [enter] to exit  " 'yellow'
