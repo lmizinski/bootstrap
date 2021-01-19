@@ -28,7 +28,7 @@ Copy file scripts_path/configs/config.ini.example to scripts_path/configs/config
 
 ## File list
  * test_enviroment.sh - tests whether all necesary requirements are preinstalled
- * generate_ssh.sh - creates ssh key `ssh\id_rsa.pub`. This file has to be added to git Deploy Key, to be give your server access to your github repository
+ * ssh_generate.sh - creates ssh key `ssh\id_rsa.pub`. This file has to be added to git Deploy Key, to be give your server access to your github repository
  * install.sh - dowloads code from your git repo specified in settings file,
  * update.sh - updates code from your git repo specified in settings file,
  * setup_docker.sh - creates containers and checks status
@@ -43,7 +43,7 @@ Follow these steps to install app:
  * test if all necesary software is installed `sudo bash /home/username/app/scripts/test_enviroment.sh`
  * copy settings file `sudo cp /home/username/app/scripts/configs/config.ini.example /home/username/app/scripts/configs/config.ini`
  * update settings file `sudo mcedit /home/username/app/scripts/configs/config.ini`
- * generate ssh key `sudo bash /home/username/app/scripts/generate_ssh.sh`. This will create file `ssh\id_rsa.pub`. This file has to be added to git Deploy Key, to be give your server access to your github repository.
+ * generate ssh key `sudo bash /home/username/app/scripts/ssh_generate.sh`. This will create file `ssh\id_rsa.pub`. This file has to be added to git Deploy Key, to be give your server access to your github repository.
  * test if all necesary software is installed `sudo bash /home/username/app/scripts/test_enviroment.sh`
  * install app `sudo bash /home/username/app/scripts/install.sh $USER`
  * setup docker `sudo bash /home/username/app/scripts/setup_docker.sh` 
