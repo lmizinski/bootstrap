@@ -27,6 +27,7 @@ envFile=".env.prod"
 
 # do you use those in your app? (1-yes, 0-no)
 postgresql=1
+sqlsrv=1
 laravel=1
 laravelVoyager=0
 composer=1
