@@ -23,4 +23,7 @@ cd $wwwPath
 ######## start usług ###########################
 sudo docker exec -d php php-fpm
 
+cd $scriptsPath
+bash "$scriptsPath/restart_services.sh"
+
 echo "Aktualizacja zakończona"
