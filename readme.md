@@ -37,7 +37,8 @@ Copy file scripts_path/configs/config.ini.example to scripts_path/configs/config
 Username is your linux user name. You can check it with "whoami" command.
 
 Follow these steps to install app:
- * if the folder where you want your scripts to be installed doesn't exist, create it `sudo mkdir "/home/username/app/scripts"`
+ * if the folder where you want your scripts to be installed doesn't exist, create it 
+ `sudo mkdir "/home/username/app/scripts"`
  * go to the folder  `sudo cd "/home/username/app/scripts"`
  * download scripts `sudo git clone https://github.com/lmizinski/bootstrap .`
  * test if all necesary software is installed `sudo bash /home/username/app/scripts/test_enviroment.sh`
