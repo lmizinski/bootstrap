@@ -2,7 +2,7 @@
 source "./configs/config.ini"
 source "functions.sh"
 
-PS3='Czy na pewno chcesz pobrać kod od nowa? Operacja usunie WSZYSTKIE pliki z folderu www i pobierze kod od nowa: '
+PS3='Czy na pewno chcesz pobrać kod od nowa? Operacja usunie WSZYSTKIE pliki z folderu www, skasuje bazę i pobierze kod od nowa: '
 options=("Kontynuuj" "Przerwij")
 select opt in "${options[@]}"
 do
