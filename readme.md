@@ -43,8 +43,7 @@ Follow these steps to install app:
  * download scripts `sudo git clone https://github.com/lmizinski/bootstrap .`
  * test if all necesary software is installed `sudo bash /home/username/app/scripts/test_enviroment.sh`
  * copy settings file `sudo cp /home/username/app/scripts/configs/config.ini.example /home/username/app/scripts/configs/config.ini`
- * update settings file `sudo mcedit /home/username/app/scripts/configs/config.ini`
-   *make sure you update username, appGitUrl, envFile, and all required applications
+ * update settings file `sudo mcedit /home/username/app/scripts/configs/config.ini` (make sure you update username, appGitUrl, envFile, and all required applications)
  * generate ssh key `sudo bash /home/username/app/scripts/ssh_generate.sh`. This will create file `ssh\id_rsa.pub`. This file has to be added to git Deploy Key, to be give your server access to your github repository.
  * test if all necesary software is installed `sudo bash /home/username/app/scripts/test_enviroment.sh`
  * install app `sudo bash /home/username/app/scripts/install.sh $USER`
