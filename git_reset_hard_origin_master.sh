@@ -2,7 +2,7 @@
 source "./configs/config.ini"
 source "functions.sh"
 
-print_message "git pull" 'yellow'
+print_message "git fetch origin; git reset --hard origin/master;" 'yellow'
 cd $wwwPath
 sshCommand='ssh-add ../../scripts/ssh/id_rsa;  git fetch origin; git reset --hard origin/master;'
 ssh-agent bash -c "$sshCommand"
