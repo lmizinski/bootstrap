@@ -29,9 +29,10 @@ Copy file scripts_path/configs/config.ini.example to scripts_path/configs/config
 ## File list
  * test_enviroment.sh - tests whether all necesary requirements are preinstalled
  * ssh_generate.sh - creates ssh key `ssh\id_rsa.pub`. This file has to be added to git Deploy Key, to be give your server access to your github repository
- * install.sh - dowloads code from your git repo specified in settings file,
+ * install.sh - dowloads code from your git repo specified in settings file, WARNING!! Don't use unless you are ready to lose ALL DATA. App will be destroyed, and recreated.
  * update.sh - updates code from your git repo specified in settings file,
  * setup_docker.sh - creates containers and checks status
+ * restart_services.sh - restartuje komponenty dockerowe i restartuje usługi na nich odpalone
  
 ## Instalation process
 Username is your linux user name. You can check it with "whoami" command.
